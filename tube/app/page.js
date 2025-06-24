@@ -1,9 +1,12 @@
+// src/App.js
+import Navbar from './components/navbar';
+import About from './components/about';
 
-
-export default function Home() {
+export default function App() {
   return (
     <div>
-      Hi
+      <Navbar />
+      <About />
     </div>
   );
 }
