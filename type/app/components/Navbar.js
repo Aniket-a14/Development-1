@@ -4,7 +4,7 @@ import { FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa";
 export default function Navbar() {
   return (
     <nav className="bg-gray-200 text-black flex justify-between items-center p-6 shadow-md">
-      <div className="text-2xl font-semibold">Pallavi's</div>
+      <div className="text-2xl font-semibold">Pallavi gallery</div>
       <ul className="flex gap-6 items-center text-gray-700">
         <li className="font-medium border-b-2 border-black">Work</li>
        
