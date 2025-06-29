@@ -1,4 +1,4 @@
-// components/About.js
+
 export default function About() {
   return (
     <section className="p-6 bg-gray-100 text-center">
