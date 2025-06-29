@@ -1,4 +1,3 @@
-// components/Navbar.js
 import { FaGithub, FaLinkedin, FaPinterest } from "react-icons/fa";
 
 export default function Navbar() {
