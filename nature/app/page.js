@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
 import About from "./components/About";
 import Footer from "./components/Footer";
+import Image from "next/image";
 
 export default function HomePage() {
   const cards = [
@@ -55,9 +56,11 @@ export default function HomePage() {
 
       <main className="flex flex-col items-center px-4">
         <div className="bg-white shadow-lg rounded-2xl p-6 w-full max-w-md transition-all duration-700 ease-in-out text-center overflow-hidden">
-          <img
+          <Image
             src={cards[index].image}
             alt="Motivational"
+            width={320}
+            height={384}
             className="rounded-xl mx-auto w-80 h-96 object-cover mb-4 min-w-80 min-h-96 max-w-80 max-h-96"
             style={{ width: '320px', height: '384px', objectFit: 'cover' }}
           />
