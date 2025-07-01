@@ -54,13 +54,14 @@ export default function HomePage() {
       </header>
 
       <main className="flex flex-col items-center px-4">
-        <div className="bg-white shadow-lg rounded-2xl p-6 w-full max-w-md transition-all duration-700 ease-in-out text-center">
+        <div className="bg-white shadow-lg rounded-2xl p-6 w-full max-w-md transition-all duration-700 ease-in-out text-center overflow-hidden">
           <img
             src={cards[index].image}
             alt="Motivational"
-            className="rounded-xl mx-auto w-80 h-96 object-cover mb-4"
+            className="rounded-xl mx-auto w-80 h-96 object-cover mb-4 min-w-80 min-h-96 max-w-80 max-h-96"
+            style={{ width: '320px', height: '384px', objectFit: 'cover' }}
           />
-          <p className="text-xl italic font-medium text-[#7b2cbf]">
+          <p className="text-xl italic font-medium text-[#7b2cbf] h-20 overflow-y-auto px-2 whitespace-pre-line text-ellipsis">
             {cards[index].quote}
           </p>
         </div>
