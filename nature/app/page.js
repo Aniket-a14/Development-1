@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
 import About from "./components/About";
 import Footer from "./components/Footer";
+import Image from "next/image";
 
 export default function HomePage() {
   const cards = [
@@ -40,7 +41,11 @@ export default function HomePage() {
   return (
     <div className="bg-gradient-to-br from-[#f5f5f5] to-[#fdebd0] min-h-screen text-gray-800">
       {/* Peaceful purple navbar */}
-      <Navbar/>
+      <nav className="bg-[#5e548e] text-white p-4 flex justify-center gap-8 shadow-lg">
+        <a href="#" className="hover:text-pink-300 transition">Home</a>
+        <a href="#about" className="hover:text-pink-300 transition">About</a>
+        <a href="#footer" className="hover:text-pink-300 transition">Contact</a>
+      </nav>
 
       <header className="text-center py-10">
         <h1 className="text-5xl font-bold text-purple-800"> Live Happy 
@@ -52,13 +57,16 @@ export default function HomePage() {
       </header>
 
       <main className="flex flex-col items-center px-4">
-        <div className="bg-white shadow-lg rounded-2xl p-6 w-full max-w-md transition-all duration-700 ease-in-out text-center">
-          <img
+        <div className="bg-white shadow-lg rounded-2xl p-6 w-full max-w-md transition-all duration-700 ease-in-out text-center overflow-hidden">
+          <Image
             src={cards[index].image}
             alt="Motivational"
-            className="rounded-xl mx-auto w-80 h-96 object-cover mb-4"
+            width={320}
+            height={384}
+            className="rounded-xl mx-auto w-80 h-96 object-cover mb-4 min-w-80 min-h-96 max-w-80 max-h-96"
+            style={{ width: '320px', height: '384px', objectFit: 'cover' }}
           />
-          <p className="text-xl italic font-medium text-[#7b2cbf]">
+          <p className="text-xl italic font-medium text-[#7b2cbf] h-20 overflow-y-auto px-2 whitespace-pre-line text-ellipsis">
             {cards[index].quote}
           </p>
         </div>
