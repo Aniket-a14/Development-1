@@ -40,14 +40,12 @@ export default function HomePage() {
   return (
     <div className="bg-gradient-to-br from-[#f5f5f5] to-[#fdebd0] min-h-screen text-gray-800">
       {/* Peaceful purple navbar */}
-      <nav className="bg-[#5e548e] text-white p-4 flex justify-center gap-8 shadow-lg">
-        <a href="#" className="hover:text-pink-300 transition">Home</a>
-        <a href="#about" className="hover:text-pink-300 transition">About</a>
-        <a href="#footer" className="hover:text-pink-300 transition">Contact</a>
-      </nav>
+      <Navbar/>
 
       <header className="text-center py-10">
-        <h1 className="text-5xl font-bold text-purple-800"> Live Happy </h1>
+        <h1 className="text-5xl font-bold text-purple-800"> Live Happy 
+          
+        </h1>
         <p className="text-lg mt-4 text-gray-600">
           This space is just for you — to feel calm, focused, and strong.
         </p>
@@ -65,7 +63,7 @@ export default function HomePage() {
           </p>
         </div>
       </main>
-
+       
       <About />
       <Footer />
     </div>
